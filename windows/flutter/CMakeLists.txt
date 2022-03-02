@@ -89,7 +89,7 @@ add_custom_command(
     ${CPP_WRAPPER_SOURCES_APP}
     ${PHONY_OUTPUT}
   COMMAND ${CMAKE_COMMAND} -E env
-    ${FLUTTER_TOOL_ENVIRONMENT}
+    ${FLUTTER_TOOL_UA}
     "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.bat"
       windows-x64 $<CONFIG>
   VERBATIM
