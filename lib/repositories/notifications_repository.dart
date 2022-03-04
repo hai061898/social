@@ -5,7 +5,7 @@ import 'package:social/helpers/helpers.dart';
 import 'package:social/models/response_notifications.dart';
 import 'package:social/services/url_api.dart';
 
-class NotificationsRepoitories {
+class NotificationsRepositories {
   Future<List<Notificationsdb>> getNotificationsByUser() async {
     final token = await secureStorage.readToken();
 
@@ -18,4 +18,4 @@ class NotificationsRepoitories {
   }
 }
 
-final notificationRepositories = NotificationsRepoitories();
+final notificationRepositories = NotificationsRepositories();
