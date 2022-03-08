@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names, unused_element
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social/models/response_user.dart';
