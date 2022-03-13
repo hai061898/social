@@ -138,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: InkWell(
                         onTap: () => Navigator.push(context, routeSlide(page: const ForgotPasswordPage())),
-                        child: const TextCustom(text: 'Olvide mi contraseña?')
+                        child: const TextCustom(text: 'I forgot my password?')
                       )
                     )
               
