@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social/bloc/auth/auth_bloc.dart';
 import 'package:social/bloc/user/user_bloc.dart';
 import 'package:social/helpers/helpers.dart';
-import 'package:social/ui/screens/login/start_page.dart';
+import 'package:social/ui/screens/user&auth/start_page.dart';
+
 import 'package:social/ui/themes/colors.dart';
 import 'package:social/ui/widgets/widgets.dart';
 
@@ -85,8 +86,7 @@ class _CheckingLoginPageState extends State<CheckingLoginPage>
                             scale: _scaleAnimation.value,
                             child: Image.asset('assets/img/logo-white.png'))),
                     const SizedBox(height: 10.0),
-                    const TextCustom(
-                        text: 'Checking...', color: Colors.white)
+                    const TextCustom(text: 'Checking...', color: Colors.white)
                   ],
                 ),
               ),
