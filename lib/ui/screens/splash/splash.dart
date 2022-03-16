@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social/bloc/auth/auth_bloc.dart';
 import 'package:social/bloc/user/user_bloc.dart';
 import 'package:social/helpers/helpers.dart';
+import 'package:social/ui/screens/home/home_page.dart';
 import 'package:social/ui/screens/user&auth/start_page.dart';
 
 import 'package:social/ui/themes/colors.dart';
