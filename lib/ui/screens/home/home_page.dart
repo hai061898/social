@@ -6,6 +6,7 @@ import 'package:social/helpers/helpers.dart';
 import 'package:social/helpers/modals/modals.dart';
 import 'package:social/models/response_post.dart';
 import 'package:social/repositories/post_repository.dart';
+import 'package:social/ui/screens/addpost/add_post_page.dart';
 import 'package:social/ui/screens/home/components/list_histories.dart';
 import 'package:social/ui/screens/home/components/list_view_post.dart';
 import 'package:social/ui/screens/home/components/list_without_post.dart';
