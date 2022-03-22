@@ -176,7 +176,7 @@ class _CommentsPostPageState extends State<CommentsPostPage> {
                                         border: InputBorder.none,
                                         contentPadding:
                                             const EdgeInsets.only(left: 10.0),
-                                        hintText: 'Escribe un comentario',
+                                        hintText: 'Write a comment',
                                         hintStyle: GoogleFonts.roboto(
                                             color: Colors.white)),
                                   ),
