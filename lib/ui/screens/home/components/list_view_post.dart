@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social/bloc/post/post_bloc.dart';
 import 'package:social/helpers/helpers.dart';
 import 'package:social/services/url_api.dart';
+import 'package:social/ui/screens/comments/comment_post_page.dart';
 import 'package:social/ui/widgets/widgets.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:social/models/response_post.dart';
