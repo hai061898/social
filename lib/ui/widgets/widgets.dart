@@ -8,6 +8,7 @@ import 'package:social/helpers/helpers.dart';
 import 'package:social/services/url_api.dart';
 import 'package:social/ui/screens/home/home_page.dart';
 import 'package:social/ui/screens/notification/notification_page.dart';
+import 'package:social/ui/screens/search/search_page.dart';
 import 'package:social/ui/themes/colors.dart';
 
 part 'text_c.dart';
