@@ -16,3 +16,4 @@ part 'modal_loading_short.dart';
 part 'modal_warning.dart';
 part 'modal_privacy_post.dart';
 part 'modal_show_post.dart';
+part 'modal_reel.dart';
