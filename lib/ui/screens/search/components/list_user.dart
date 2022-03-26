@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:social/helpers/helpers.dart';
 import 'package:social/models/response_search.dart';
 import 'package:social/services/url_api.dart';
+import 'package:social/ui/screens/profile/profile_another_user_page.dart';
 import 'package:social/ui/widgets/widgets.dart';
 
 class ListUsers extends StatelessWidget {

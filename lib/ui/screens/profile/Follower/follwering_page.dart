@@ -3,29 +3,30 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social/bloc/user/user_bloc.dart';
 import 'package:social/helpers/helpers.dart';
 import 'package:social/helpers/modals/modals.dart';
-import 'package:social/models/response_followers.dart';
+import 'package:social/models/response_followings.dart';
 import 'package:social/repositories/user_repository.dart';
 import 'package:social/services/url_api.dart';
+import 'package:social/ui/screens/profile/profile_another_user_page.dart';
 import 'package:social/ui/widgets/widgets.dart';
 
-class FollowersPage extends StatefulWidget {
-  const FollowersPage({Key? key}) : super(key: key);
+class FollowingPage extends StatefulWidget {
+  const FollowingPage({Key? key}) : super(key: key);
 
   @override
-  State<FollowersPage> createState() => _FollowersPageState();
+  State<FollowingPage> createState() => _FollowingPageState();
 }
 
-class _FollowersPageState extends State<FollowersPage> {
+class _FollowingPageState extends State<FollowingPage> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
-        if (state is LoadingFollowersUser) {
+        if (state is LoadingFollowingUser) {
           modalLoading(context, 'Checking...');
         } else if (state is FailureUserState) {
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
-        } else if (state is SuccessFollowersUser) {
+        } else if (state is SuccessFollowingUser) {
           Navigator.pop(context);
           setState(() {});
         }
@@ -35,7 +36,7 @@ class _FollowersPageState extends State<FollowersPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: const TextCustom(
-              text: 'Followers', letterSpacing: .8, fontSize: 19),
+              text: 'Friends', letterSpacing: .8, fontSize: 19),
           elevation: 0,
           leading: IconButton(
               splashRadius: 20,
@@ -46,8 +47,8 @@ class _FollowersPageState extends State<FollowersPage> {
               )),
         ),
         body: SafeArea(
-          child: FutureBuilder<List<Follower>>(
-            future: userRepositories.getAllFollowers(),
+          child: FutureBuilder<List<Following>>(
+            future: userRepositories.getAllFollowing(),
             builder: (context, snapshot) {
               return !snapshot.hasData
                   ? Column(
@@ -59,7 +60,7 @@ class _FollowersPageState extends State<FollowersPage> {
                         ShimmerCustom(),
                       ],
                     )
-                  : _ListFollowers(follow: snapshot.data!);
+                  : _ListFollowings(follow: snapshot.data!);
             },
           ),
         ),
@@ -68,10 +69,10 @@ class _FollowersPageState extends State<FollowersPage> {
   }
 }
 
-class _ListFollowers extends StatelessWidget {
-  final List<Follower> follow;
+class _ListFollowings extends StatelessWidget {
+  final List<Following> follow;
 
-  const _ListFollowers({Key? key, required this.follow}) : super(key: key);
+  const _ListFollowings({Key? key, required this.follow}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -127,11 +128,11 @@ class _ListFollowers extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50.0),
                         splashColor: Colors.blue[50],
                         onTap: () => userBloc
-                            .add(OnDeletefollowersEvent(follow[i].uidUser)),
+                            .add(OnDeletefollowingEvent(follow[i].uidUser)),
                         child: const Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: 17.0, vertical: 6.0),
-                          child: TextCustom(text: 'Remove', fontSize: 16),
+                          child: TextCustom(text: 'followers', fontSize: 16),
                         )),
                   ),
                 ],

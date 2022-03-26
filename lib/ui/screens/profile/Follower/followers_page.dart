@@ -6,6 +6,7 @@ import 'package:social/helpers/modals/modals.dart';
 import 'package:social/models/response_followers.dart';
 import 'package:social/repositories/user_repository.dart';
 import 'package:social/services/url_api.dart';
+import 'package:social/ui/screens/profile/profile_another_user_page.dart';
 import 'package:social/ui/widgets/widgets.dart';
 
 class FollowersPage extends StatefulWidget {
@@ -35,7 +36,7 @@ class _FollowersPageState extends State<FollowersPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: const TextCustom(
-              text: 'Seguidores', letterSpacing: .8, fontSize: 19),
+              text: 'followers', letterSpacing: .8, fontSize: 19),
           elevation: 0,
           leading: IconButton(
               splashRadius: 20,
@@ -131,7 +132,7 @@ class _ListFollowers extends StatelessWidget {
                         child: const Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: 17.0, vertical: 6.0),
-                          child: TextCustom(text: 'Eliminar', fontSize: 16),
+                          child: TextCustom(text: 'Remove', fontSize: 16),
                         )),
                   ),
                 ],

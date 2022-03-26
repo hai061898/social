@@ -5,6 +5,8 @@ import 'package:social/helpers/helpers.dart';
 import 'package:social/models/response_stories.dart';
 import 'package:social/repositories/story_repository.dart';
 import 'package:social/services/url_api.dart';
+import 'package:social/ui/screens/story/add_story_page.dart';
+import 'package:social/ui/screens/story/view_story.dart';
 import 'package:social/ui/widgets/widgets.dart';
 
 class ListHistories extends StatelessWidget {
